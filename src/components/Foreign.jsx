@@ -3,9 +3,12 @@ import Loading from './Loading';
 import Legend from './Legend';
 import WorldMap from './WorldMap';
 import LoadCountriesTask from '../tasks/LoadCountriesTask'
+import legendItems from "../entities/LegendItems";
 
 const Foreign = () => {
     const [countries, setCountries] = useState([]);
+
+    const legendItemsReverse = [...legendItems].reverse();
 
     const load = () => {
         const loadCountriesTask = new LoadCountriesTask();
@@ -18,7 +21,7 @@ const Foreign = () => {
             <Loading /> :
             <div>
                 <WorldMap countries={countries}/>
-                <Legend />
+                <Legend legendItems={legendItemsReverse} />
             </div>}
         </div>
     );
