@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
 import Legend from './Legend';
 import WorldMap from './WorldMap';

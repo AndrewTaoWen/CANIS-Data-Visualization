@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Loading from './components/Loading';
 import Foreign from './components/Foreign';
 
 
