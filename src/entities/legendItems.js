@@ -2,7 +2,7 @@ import LegendItem from "./LegendItem";
 import data from "../data/output.json"
 import countriesData from "../data/countries.json"
 
-var legendItems = [
+const LegendItems = [
   new LegendItem(
     "100,000,000 +",
     "#741f1f",
@@ -38,4 +38,4 @@ var legendItems = [
   new LegendItem("No Data", "#ffffff", (cases) => true),
 ];
 
-export default legendItems;
+export default LegendItems;

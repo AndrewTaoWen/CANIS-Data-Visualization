@@ -1,6 +1,6 @@
 import countriesData from "../data/countries.json";
 import parsedData from "../data/output.json"
-import legendItems from "../entities/LegendItems";
+import LegendItems from "../entities/LegendItems";
 
 const ANGLOSPHERE = new Set(["Australia", "Canada", "New Zealand", "United Kingdom", "United States of America"]);
 const ASEAN = new Set(["Brunei", "Cambodia", "Indonesia", "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam"]);
@@ -62,7 +62,7 @@ class LoadCountriesTask {
     }
 
     #setCountryColor = (country) => {
-        const legendItem = legendItems.find((item) =>
+        const legendItem = LegendItems.find((item) =>
             item.isFor(country.properties.confirmed)
         );
 
