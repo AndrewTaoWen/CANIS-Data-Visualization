@@ -1,3 +1,132 @@
 .leaflet-container {
     background-color: rgb(163, 206, 255);
 }
+
+.slide-in-box {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 300px; 
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.slide-in-box.left {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.slide-in-box.right {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.slide-in-box.visible {
+    transform: translateX(0);
+}
+
+.country-name {
+    color: #007bff;
+    text-align: center;
+}
+
+.country-info {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.country-info span {
+    font-weight: bold;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000; /* Ensure this is high enough */
+}
+
+
+.country-box {
+    display: flex;
+    width: 80%; /* Adjust size as needed */
+    max-height: 80vh; /* Adjust height as needed */
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.box-left, .box-right {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.box-left {
+    width: 40%; /* Adjust the width ratio as needed */
+    border-right: 2px solid #eee;
+}
+
+.box-right {
+    width: 60%;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.next-button, .previous-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+}
+
+.next-button {
+    right: 10px; /* Positioned to the right */
+}
+
+.previous-button {
+    left: 10px; /* Positioned to the left */
+}
+
+.user-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.country-name {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.country-info, .country-info span {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Additional styling for strong elements in user-details */
+.user-details strong {
+    font-weight: bold;
+}

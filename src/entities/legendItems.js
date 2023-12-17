@@ -4,37 +4,35 @@ import countriesData from "../data/countries.json"
 
 var legendItems = [
   new LegendItem(
-    "1,000,000 +",
+    "100,000,000 +",
     "#741f1f",
-    // "#8b0000",
-    (cases) => cases >= 1_000_000,
+    (cases) => cases >= 100_000_000,
     "white"
   ),
 
   new LegendItem(
-    "500,000 - 999,999",
-    // "#741f1f",
+    "50,000,000 - 99,999,999",
     "#9c2929",
-    (cases) => cases >= 500_000 && cases < 1_000_000,
+    (cases) => cases >= 50_000_000 && cases < 99_999_999,
     "White"
   ),
 
   new LegendItem(
-    "200,000 - 499,999",
+    "10,000,000 - 49,999,999",
     "#c57f7f",
-    (cases) => cases >= 200_000 && cases < 500_000
+    (cases) => cases >= 10_000_000 && cases < 50_000_000
   ),
 
   new LegendItem(
-    "50,000 - 199,999",
+    "5,000,000 - 9,999,999",
     "#d8aaaa",
-    (cases) => cases >= 50_000 && cases < 200_000
+    (cases) => cases >= 5_000_000 && cases < 10_000_000
   ),
 
   new LegendItem(
-    "0 - 49,999",
+    "0 - 4,999,999",
     "#ebd4d4",
-    (cases) => cases > 0 && cases < 50_000
+    (cases) => cases > 0 && cases < 5_000_000
   ),
 
   new LegendItem("No Data", "#ffffff", (cases) => true),

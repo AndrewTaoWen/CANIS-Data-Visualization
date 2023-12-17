@@ -52,7 +52,6 @@ class LoadCountriesTask {
     load = (setState) => {
         const features = countriesData.features;
         const aggregatedData = this.aggregateData(parsedData);
-        console.log(aggregatedData)
         features.forEach(feature => {
             const countryName = feature.properties.ADMIN; 
             const dataValue = aggregatedData[countryName] || 0; 
