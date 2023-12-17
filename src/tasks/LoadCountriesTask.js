@@ -1,6 +1,6 @@
 import countriesData from "../data/countries.json";
 import parsedData from "../data/output.json"
-import LegendItems from "../entities/LegendItems";
+import LegendItems from "../entities/LegendItems.js";
 
 const ANGLOSPHERE = new Set(["Australia", "Canada", "New Zealand", "United Kingdom", "United States of America"]);
 const ASEAN = new Set(["Brunei", "Cambodia", "Indonesia", "Laos", "Malaysia", "Myanmar", "Philippines", "Singapore", "Thailand", "Vietnam"]);
