@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import './WorldMap.css';
 
 const CountryBox = ({ isVisible, onClose, name, users }) => {
@@ -7,7 +7,6 @@ const CountryBox = ({ isVisible, onClose, name, users }) => {
     const maxIndex = users.length - 1;
 
     const [curIndex, setCurIndex] = useState(0);
-    const [curProfile, setCurProfile] = useState(users[0]);
     const [countryInfo, setCountryInfo] = useState({
         capital: '',
         population: '',
@@ -36,10 +35,6 @@ const CountryBox = ({ isVisible, onClose, name, users }) => {
         })
     }
 
-    useEffect(() => {
-        setCurProfile(users[curIndex]);
-        console.log(curProfile)
-    }, [curIndex])
 
     useEffect(() => {
         const fetchCountryInfo = async () => {
