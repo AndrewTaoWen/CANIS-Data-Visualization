@@ -8,7 +8,7 @@ import outputData from '../data//output.json'; // Adjust the path as needed
 
 const WorldMap = ({ countries, }) => {
 
-    const [map, setMap] = useState(null);
+    const [, setMap] = useState(null);
     const [boxVisible, setBoxVisible] = useState(false);
     const [curCountry, setCurCountry] = useState(null);
     const [curUsers, setCurUsers] = useState([]);
